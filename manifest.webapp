@@ -1,0 +1,24 @@
+{
+    "version":      "1.3",
+    "name":         "Ici c'est Issy",
+    "description":  "Informations (opendata) de la ville d'Issy-les-Moulineaux",
+    "launch_path":  "/index.htm",
+    "icons": {
+    "16":   "/media/images/logos/16.png",
+    "32":   "/media/images/logos/32.png",
+    "48":   "/media/images/logos/48.png",
+    "60":   "/media/images/logos/60.png",
+    "90":   "/media/images/logos/90.png",
+    "120":  "/media/images/logos/120.png",
+    "128":  "/media/images/logos/128.png",
+    "256":  "/media/images/logos/256.png"
+    },
+    "developer": {
+        "name": "Irwigo.net",
+        "url": "http://www.irwigo.net"
+    },
+    "default_locale": "fr",
+    "permissions": {
+        "systemXHR": { "description": "Required to make Ajax Calls over the Network" }
+    }
+}

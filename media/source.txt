@@ -1,0 +1,7 @@
+Icones :
+    Marker      https://www.iconfinder.com/search/?q=iconset%3AMobile-Icons
+    Calendar    "
+    Email       https://www.iconfinder.com/search/?q=iconset:ie_Bright
+    Internet    "
+    Téléphone   "
+    Map         https://www.iconfinder.com/search/?q=iconset:media-icon-set-by-bevelandemboss

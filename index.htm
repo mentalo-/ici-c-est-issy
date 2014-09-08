@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ici c'est Issy</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="scripts/libs/jquery/mobile/1.4.2/jquery.mobile-1.4.2.css" />
+	<link rel="stylesheet" href="css/libs/jquery/themes/smoothness/jquery-ui-1.10.4.custom.min.css" />
+    <link rel="stylesheet" href="scripts/libs/leaflet/leaflet.css" />
+	<link rel="stylesheet" href="css/issy.css" />
+</head>
+<body id="ui-page-top" class="ui-mobile-viewport ui-overlay-a">
+
+<!-- ---- -->
+<!-- HOME -->
+<!-- ---- -->
+<div data-role="page" id="home">
+    
+	<div data-role="header" data-position="fixed">
+		<h1>Ici c'est Issy</h1>
+        <a href="#dialog_info" data-icon="info" data-iconpos="notext" data-rel="dialog" data-transition="slidedown" data-prefetch="true" class="ui-btn-right">&nbsp;</a>
+	</div><!-- /header -->
+    
+	<div data-role="main" class="ui-content">
+        <div class="bloc">
+            <a href="#page_poi_list" class="ui-link-inherit" data-transition="slide" data-prefetch="true">
+                <img src="media/images/marker.png" alt="Points d'intérêt"><br />
+                Points d'intérêt
+            </a>
+        </div>
+        <div class="bloc">
+            <a href="#page_agenda" class="ui-link-inherit" data-transition="slide" data-prefetch="true">
+                <img src="media/images/calendar.png" alt="Agenda"><br />
+                Agenda
+            </a>
+        </div>
+	</div><!-- /content -->
+    <!--
+    <div data-role="footer" data-position="fixed">
+		<h1>Footer</h1>
+	</div><!-- /footer -->
+    
+</div><!-- /page "home" -->
+
+<!-- --- -->
+<!-- POI -->
+<!-- --- -->
+<div data-role="page" id="page_poi_list">
+
+	<div data-role="header" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left">&nbsp;</a>
+		<h1>Points d'intérêt</h1>
+        <a href="#dialog_info" data-icon="info" data-iconpos="notext" data-rel="dialog" data-transition="slidedown" data-prefetch="true" class="ui-btn-right">&nbsp;</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+        <p class="choisissez_categorie">Choisissez une catégorie : </p>
+        <select name="categories" id="categories">
+            <!-- contenu chargé par appel Ajax (service getCategories) -->
+        </select>
+        <span class="error_message"></span>
+        <br /><br />
+        <div  id="poi_list">
+            <!-- contenu chargé par appel Ajax (service getPois) -->
+        </div>
+	</div><!-- /content -->
+
+</div><!-- /page "poi" -->
+
+<!-- ---------- -->
+<!-- DETAIL POI -->
+<!-- ---------- -->
+<div data-role="page" id="page_poi_detail">
+
+	<div data-role="header" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left">&nbsp;</a>
+		<h1>Détails</h1>
+        <a href="#dialog_info" data-icon="info" data-iconpos="notext" data-rel="dialog" data-transition="slidedown" data-prefetch="true" class="ui-btn-right">&nbsp;</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+        <div id="poi_detail">
+            <!-- contenu chargé par appel Ajax (service getPoiDetail) -->
+        </div>
+        <div id="map">
+            <!-- carte affichée avec la fonction JS showMap() -->
+        </div>
+	</div><!-- /content -->
+</div>
+
+<!-- ------ -->
+<!-- AGENDA -->
+<!-- ------ -->
+<div data-role="page" id="page_agenda">
+
+	<div data-role="header" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left">&nbsp;</a>
+		<h1>Agenda</h1>
+        <a href="#dialog_info" data-icon="info" data-iconpos="notext" data-rel="dialog" data-transition="slidedown" data-prefetch="true" class="ui-btn-right">&nbsp;</a>
+	</div><!-- /header -->
+
+	<div data-role="content">
+        <div  id="agenda_list">
+            <!-- contenu chargé par appel Ajax (service getAgenda) -->
+        </div>
+        <span class="error_message"></span>
+	</div><!-- /content -->
+
+</div><!-- /page "page_agenda" -->
+
+<!-- ---- -->
+<!-- INFO -->
+<!-- ---- -->
+<div data-role="page" id="dialog_info">
+
+    <div data-role="header">
+        <h2>Informations</h2>
+    </div>
+    <div class="ui-content" role="main">
+        <p class="info_text">
+            Les informations publiées sont fournies par la <a href="http://www.data.gouv.fr/fr/organization/ville-d-issy-les-moulineaux" target="_blank">Ville d'Issy-les-Moulineaux</a>, et publiées sous <a href="http://wiki.data.gouv.fr/wiki/Licence_Ouverte_/_Open_Licence" target="_blank">Licence Ouverte</a>, sans aucune garantie de leur exactitude, pertinence, ou actualité.
+        </p>
+        <p class="info_text">
+            Images : <br />
+            <ul>
+                <li>Logo de l'application créé par <a href="http://commons.wikimedia.org/wiki/File:Blason_ville_fr_Issy-les-Moulineaux_%28Hauts-de-Seine%29.svg" target="_blank">Spedona</a>, sous licence GNU Free Documentation License</li>
+                <li>
+                    Icones fournies par IconFinder.com, et utilisées avec l'accord des créateurs : <br />
+                    <a href="https://www.iconfinder.com/search/?q=iconset%3AMobile-Icons" target="_blank">WebIconSet.com</a>&nbsp;
+                    (<a href="http://www.webiconset.com/" target="_blank">site web</a>), <br />
+                    <a href="https://www.iconfinder.com/search/?q=iconset:ie_Bright" target="_blank">IconEden.com</a>&nbsp;
+                    (<a href="http://www.iconeden.com/icon/category/free" target="_blank">site web</a>), <br />
+                    <a href="https://www.iconfinder.com/search/?q=iconset:media-icon-set-by-bevelandemboss" target="_blank">Bevelandemboss.net</a>&nbsp;
+                    (<a href="http://bevelandemboss.net/free-media-icon-set" target="_blank">site web</a>), <br />
+                </li>
+            </ul>
+        </p>
+        <p class="info_text">
+            Librairies : <br />
+            <ul>
+                <li><a href="https://jquery.org/" target="_blank">jQuery</a>, sous licence MIT</li>
+                <li><a href="https://jquerymobile.com/" target="_blank">jQuery Mobile</a>, sous licence MIT</li>
+                <li><a href="www.leafletjs.com/" target="_blank">Leaflet.js</a>, sous licence <a href="https://github.com/Leaflet/Leaflet/blob/master/LICENSE" target="_blank">Open Source</a>, utilisant les <a href="http://www.openstreetmap.org/copyright" target="_blank">travaux d'OpenStreetMap et de ses contributeurs</a></li>
+            </ul>
+        </p>
+    </div>
+    
+</div><!-- /page "dialog_info" -->
+
+<script src="scripts/libs/jquery/jquery-1.11.0.min.js"></script>
+<script src="scripts/libs/jquery/ui/jquery-ui-1.10.4.custom.min.js"></script>
+<script src="scripts/libs/jquery/mobile/1.4.2/jquery.mobile-1.4.2.js"></script>
+<script src="scripts/libs/leaflet/leaflet.js"></script>
+<script src="scripts/js/loader.js"></script>
+<script src="scripts/js/issy.js"></script>
+</body>
+</html>
