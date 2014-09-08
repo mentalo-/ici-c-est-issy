@@ -1,0 +1,119 @@
+    
+    .bloc {
+        float: left;
+        margin: 1% 2%;
+        text-align: center;
+    }
+    
+    #categories-button {
+        margin: 0 5%;
+    }
+    
+    .choisissez_categorie {
+        margin: 1% 5%;
+        width: 90%;
+    }
+    
+    /* liste des POI d'une catégorie */
+    .poi_items {
+        margin: 0 5% !important;
+        padding: 0 1% !important;
+        text-align: center;
+        width: 90%;
+    }
+    
+    /* Détail d'un POI */
+    .poi_item h1 {
+        display: block;
+        font-size: 1.5em;
+        margin: 0 10%;
+        min-height: 1.1em;
+        outline: 0 none !important;
+        overflow: hidden;
+        padding: 0.7em 0;
+        text-align: center;
+        /*text-overflow: ellipsis;*/
+        white-space: normal !important; /* nowrap */
+        word-wrap: break-word !important;
+    }
+    
+    .poi_item p.titre,
+    .poi_item p.description {
+        white-space: normal !important; /* nowrap */
+        word-wrap: break-word !important;
+    }
+    
+    /* liste des événements de l'agenda */
+    .evt_items {
+        margin: 0 5% !important;
+        padding: 0 1% !important;
+        text-align: left !important;o
+        width: 90%;
+    }
+    
+    /* Détail d'un événement (agenda) */
+    .evt_item h1 {
+        display: block;
+        font-size: 1.5em;
+        margin: 0 10%;
+        min-height: 1.1em;
+        outline: 0 none !important;
+        overflow: hidden;
+        padding: 0.7em 0;
+        text-align: center;
+        /*text-overflow: ellipsis;*/
+        white-space: normal !important; /* nowrap */
+        word-wrap: break-word !important;
+    }
+    
+    .evt_item p.titre,
+    .evt_item p.description {
+        white-space: normal !important; /* nowrap */
+        word-wrap: break-word !important;
+    }
+    
+    #map {
+        height: 240px;
+        width: 320px;
+    }
+    
+    .info_text {
+        padding: 1% 2%;
+    }
+    
+    /* *********** */
+    /* Styles tips */
+    /* *********** */
+    .align-center { text-align: center !important; }
+    .align-justify { text-align: justify !important; }
+    .align-left { text-align: left !important; }
+    .align-right { text-align: right !important; }
+    .bleu { font-size:0.8em; color: #1772d9; padding-left:10px; }
+    .bold { font-weight: bold !important; }
+    .cursor-pointer { cursor: pointer !important; }
+    .error { color: rgb(220, 0, 0) !important; }
+    .error-bg { background-color: rgb(220, 0, 0) !important; }
+    .float-left { float: left !important; }
+    .italic { font-style:italic !important; }
+    .success { color: rgb(0, 160, 0) !important; }   
+    .success-bg { background-color: rgb(0, 160, 0) !important; }   
+    .espace {  clear: both;  overflow: hidden;height: 5px;}
+    .pad0   {  padding: 0px;}
+    .pad10 {  padding: 10px;}
+    .champ_obligatoire { color: red; }
+    .valign-middle { vertical-align: middle; }
+    input.field-error { /* input qui passe en fond rouge quand il est en erreur */
+        background-color:rgba(255, 0, 0, 0.2);
+        border: 1px solid red;
+        color: black;
+    }
+    
+    /** Surcharges Styles jQuery UI **/
+    .ui-content { /* surcharge style jquery UI */
+        padding: 0;
+    }
+    
+    .ui-content .ui-listview, .ui-panel-inner > .ui-listview {
+        margin: 0 !important;
+    }
+    
